@@ -1,0 +1,11 @@
+resources:
+- name: my-instance
+  type: compute.v1.instance
+  properties:
+    zone: us-central1-a
+    machineType: zones/us-central1-a/machineTypes/e2-medium
+    disks:
+    - boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: projects/debian-cloud/global/images/family/debian-10
