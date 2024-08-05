@@ -1,0 +1,12 @@
+apiVersion: compute.googleapis.com/v1beta1
+kind: ComputeInstance
+metadata:
+  name: my-instance
+spec:
+  zone: us-central1-a
+  machineType: e2-medium
+  disks:
+    - boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: projects/debian-cloud/global/images/family/debian-10
